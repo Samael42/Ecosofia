@@ -3,22 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ecosofia e a Ecologia Ambiental</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:ital,wght@0,400;1,400&family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <title>Ecosofia e Ecologia Ambiental</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
   <style>
-    /* 🌿 Estilos gerais */
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #f5f5f0;
-      color: #2f3e46;
+      background-color: #f0f9f4;
+      color: #1b2a2f;
       scroll-behavior: smooth;
     }
 
     header {
-      background-color: #2f3e46;
-      color: #ffffff;
-      padding: 2rem;
+      background: linear-gradient(90deg, #2a9d8f, #457b9d);
+      color: #fff;
+      padding: 2rem 1rem;
       text-align: center;
       position: sticky;
       top: 0;
@@ -27,6 +26,7 @@
 
     header h1 {
       margin: 0;
+      font-family: 'Poppins', sans-serif;
       font-size: 1.8rem;
     }
 
@@ -35,21 +35,21 @@
     }
 
     nav a {
-      color: #ffffff;
+      color: #fff;
       margin: 0 1rem;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
       transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #a8dadc;
+      color: #e0f7f1;
     }
 
     section {
-      max-width: 800px;
+      max-width: 850px;
       margin: 4rem auto;
-      padding: 0 1rem;
+      padding: 0 1.5rem;
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 1s ease, transform 1s ease;
@@ -60,45 +60,41 @@
       transform: translateY(0);
     }
 
-    /* ✨ Tipografia contextual */
+    .intro p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      font-family: 'Inter', sans-serif;
+      color: #264653;
+    }
+
+    .main-content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
     .eco-ambiental {
-      font-family: 'Merriweather', serif;
       font-style: italic;
       color: #2a9d8f;
-      font-size: 1.15rem;
-      line-height: 1.8;
     }
 
     .eco-mental {
-      font-family: 'Inter', sans-serif;
-      font-weight: 300;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.03em;
       color: #457b9d;
-      font-size: 1.1rem;
-      line-height: 1.8;
     }
 
     .eco-social {
-      font-family: 'Poppins', sans-serif;
       font-weight: 500;
-      color: #264653;
-      font-size: 1.1rem;
-      line-height: 1.8;
-    }
-
-    .intro p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      font-family: 'Merriweather', serif;
       color: #264653;
     }
 
     .highlight {
-      background-color: #e0f2f1;
+      background-color: #dff5ec;
       padding: 1rem;
-      border-left: 4px solid #2a9d8f;
+      border-left: 5px solid #2a9d8f;
       font-style: italic;
-      font-family: 'Merriweather', serif;
+      font-family: 'Poppins', serif;
+      margin: 2rem 0;
     }
 
     .quote {
@@ -107,19 +103,30 @@
       font-weight: 600;
       color: #2a9d8f;
       margin: 4rem 0;
-      font-family: 'Merriweather', serif;
+      font-family: 'Poppins', serif;
       animation: fadeIn 2s ease;
+    }
+
+    .quote::before {
+      content: "💬 ";
+    }
+
+    .keyword {
+      background-color: #eafaf1;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-weight: 600;
+      color: #1b4332;
     }
 
     footer {
       text-align: center;
       padding: 2rem;
-      background-color: #2f3e46;
+      background-color: #1b2a2f;
       color: #ffffff;
       font-size: 0.9rem;
     }
 
-    /* 📱 Responsividade */
     @media (max-width: 600px) {
       header h1 {
         font-size: 1.4rem;
@@ -135,7 +142,6 @@
       }
     }
 
-    /* 🌬️ Animações */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -143,50 +149,44 @@
   </style>
 </head>
 <body>
-  <!-- 🌟 Cabeçalho -->
   <header>
     <h1>Ecosofia e a Ecologia Ambiental segundo Félix Guattari</h1>
     <nav>
       <a href="#intro">Introdução</a>
-      <a href="#principal">Texto Principal</a>
+      <a href="#principal">Texto</a>
       <a href="#citacao">Citação</a>
     </nav>
   </header>
 
-  <!-- 🧠 Introdução -->
   <section id="intro" class="intro">
     <p>
-      A “ecosofia”, conceito desenvolvido por Félix Guattari, propõe uma abordagem integrada entre ecologia ambiental, social e mental. Para ele, cuidar do planeta não é apenas preservar a natureza, mas transformar nossas relações, pensamentos e modos de vida. Essa integração é essencial para construir uma existência mais harmônica e sustentável.
+      🌱 A <span class="keyword">ecosofia</span>, conceito de <strong>Félix Guattari</strong>, propõe a união entre <span class="keyword">ecologia ambiental</span>, <span class="keyword">social</span> e <span class="keyword">mental</span>. Ela nos convida a repensar como vivemos, sentimos e nos relacionamos com o mundo. É um chamado à transformação — pessoal, coletiva e planetária.
     </p>
   </section>
 
-  <!-- 🌍 Conteúdo principal -->
-  <section id="principal">
+  <section id="principal" class="main-content">
     <p class="eco-ambiental">
-      Para Félix Guattari, a ecologia ambiental é um dos três componentes fundamentais da ‘ecosofia’, integrando-se à ecologia social e à ecologia mental.
+      🌍 Para Félix Guattari, a <span class="keyword">ecologia ambiental</span> é um dos três pilares da ecosofia, junto da ecologia social e mental.
     </p>
     <p class="eco-mental">
-      Segundo sua perspectiva, a questão ambiental não se resume a um problema da natureza; ela é, antes, o resultado de uma crise mais profunda que afeta nossa existência, nossos relacionamentos e nossas formas de pensar.
+      🧠 A crise ambiental, segundo ele, não é apenas sobre a natureza, mas sobre como pensamos, sentimos e nos conectamos com o mundo.
     </p>
     <div class="highlight">
-      Assim, a relevância de cuidar do planeta transcende a mera subsistência: implica assegurar harmonia na natureza, bem-estar e um amanhã viável para todos os seres vivos.
+      ✨ Cuidar do planeta é mais do que sobrevivência: é buscar <strong>harmonia</strong>, <strong>bem-estar</strong> e um futuro possível para todos os seres vivos.
     </div>
     <p class="eco-social">
-      Segundo Guattari, tal cuidado demanda uma transformação no modo de pensar e nos princípios, incentivando um relacionamento inédito, mais justo e fraterno com o mundo.
+      🤝 Isso exige uma mudança profunda nos nossos <span class="keyword">valores</span> e <span class="keyword">relações</span>, promovendo um vínculo mais justo e fraterno com o mundo.
     </p>
   </section>
 
-  <!-- 💬 Citação destacada -->
   <section id="citacao" class="quote">
     “Cuidar do planeta é cuidar de nós mesmos”
   </section>
 
-  <!-- 🧾 Rodapé -->
   <footer>
-    Desenvolvido como exercício de reflexão ecológica
+    Desenvolvido como exercício de reflexão ecológica para jovens e educadores.
   </footer>
 
-  <!-- ✨ JavaScript para animações de scroll -->
   <script>
     const sections = document.querySelectorAll('section');
     const observer = new IntersectionObserver(entries => {
@@ -195,9 +195,7 @@
           entry.target.classList.add('visible');
         }
       });
-    }, {
-      threshold: 0.1
-    });
+    }, { threshold: 0.1 });
 
     sections.forEach(section => {
       observer.observe(section);
