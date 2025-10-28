@@ -1,214 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecosofia e a Ecologia Ambiental</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/757/757255.png" type="image/png">
-    <style>
-        :root {
-            --bg-color: #f4f8f5;
-            --text-color: #2d3a2e;
-            --accent-green: #4CAF50;
-            --accent-teal: #00796b;
-            --light-beige: #f8f5f1;
-            --shadow: rgba(0, 0, 0, 0.1);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecosofia — A Ecologia Ambiental</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/757/757255.png" type="image/png">
+  <style>
+    :root {
+      --bg-color: #f4f4f5;
+      --text-color: #2d323e;
+      --accent-color: #4caf50;
+      --light-accent: #e8f5e9;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            overflow-x: hidden;
-        }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
 
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(6px);
-            box-shadow: 0 2px 10px var(--shadow);
-            z-index: 10;
-        }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 8px var(--shadow);
+      text-align: center;
+      padding: 1rem 0;
+      z-index: 100;
+    }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 1rem;
-        }
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent-color);
+    }
 
-        nav a {
-            text-decoration: none;
-            color: var(--accent-teal);
-            margin: 0 1.5rem;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
+    main {
+      margin-top: 100px;
+      max-width: 800px;
+      width: 90%;
+      background: white;
+      padding: 2rem 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px var(--shadow);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
 
-        nav a:hover {
-            color: var(--accent-green);
-        }
+    main:hover {
+      transform: translateY(-4px);
+    }
 
-        section {
-            padding: 8rem 2rem;
-            text-align: center;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease, transform 1s ease;
-        }
+    h2 {
+      font-family: 'Merriweather', serif;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+    }
 
-        section.visible {
-            opacity: 1;
-            transform: translateY(0) scale(1.02);
-        }
+    p {
+      line-height: 1.8;
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
 
-        .hero {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #cde4d1, #e3f0ec);
-            overflow: hidden;
-        }
+    section {
+      margin-top: 2.5rem;
+    }
 
-        .parallax-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, var(--accent-teal) 0%, transparent 70%);
-            opacity: 0.1;
-            z-index: 0;
-        }
+    .highlight {
+      background: var(--light-accent);
+      padding: 1rem;
+      border-radius: 10px;
+      font-weight: 500;
+      color: var(--accent-color);
+      margin: 1.5rem 0;
+    }
 
-        .hero-content {
-            z-index: 1;
-        }
+    footer {
+      margin-top: 3rem;
+      padding: 1rem;
+      text-align: center;
+      color: #555;
+      font-size: 0.9rem;
+    }
 
-        h1 {
-            font-family: 'Merriweather', serif;
-            font-size: 2.8rem;
-            color: var(--accent-teal);
-        }
+    footer a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-        .intro-text, .main-content {
-            max-width: 900px;
-            margin: 0 auto;
-            line-height: 1.7;
-            background: var(--light-beige);
-            border-radius: 20px;
-            box-shadow: 0 10px 30px var(--shadow);
-            padding: 2rem;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
+    footer a:hover {
+      text-decoration: underline;
+    }
 
-        .intro-text:hover, .main-content:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 45px var(--shadow);
-        }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
 
-        .quote {
-            font-style: italic;
-            color: var(--accent-green);
-            font-size: 1.5rem;
-            margin: 3rem 0;
-        }
+      main {
+        padding: 1.5rem;
+      }
 
-        footer {
-            padding: 2rem;
-            background: var(--accent-teal);
-            color: white;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            nav a {
-                margin: 0 0.8rem;
-            }
-        }
-    </style>
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Ecosofia 🌱</h1>
+  </header>
 
-    <header>
-        <nav>
-            <a href="#intro">Introdução</a>
-            <a href="#conteudo">Conteúdo</a>
-            <a href="#citacao">Citação</a>
-        </nav>
-    </header>
+  <main>
+    <h2>O que é Ecosofia?</h2>
+    <p>
+      A <strong>Ecosofia</strong> é o estudo filosófico da relação entre o ser humano e o meio ambiente,
+      propondo uma integração ética entre tecnologia, natureza e consciência.
+    </p>
+    <div class="highlight">
+      “A ecologia sem filosofia é cega; a filosofia sem ecologia é vazia.”
+    </div>
 
-    <section class="hero">
-        <div class="parallax-bg"></div>
-        <div class="hero-content">
-            <h1>Ecosofia e a Ecologia Ambiental<br>segundo Félix Guattari</h1>
-        </div>
+    <section>
+      <h2>Nosso Propósito</h2>
+      <p>
+        Promover a reflexão sobre o impacto das ações humanas no planeta, incentivando um modo de vida
+        sustentável e respeitoso com todos os seres vivos.
+      </p>
     </section>
 
-    <section id="intro" class="intro">
-        <div class="intro-text">
-            <h2>Introdução</h2>
-            <p>A ecosofia, proposta por Félix Guattari, busca a integração entre a ecologia ambiental, a ecologia social e a ecologia mental. Essa visão amplia o debate ecológico para além do cuidado com a natureza, englobando também as relações humanas e nossas formas de pensar e sentir o mundo. É um convite à transformação cultural e existencial rumo a uma convivência mais harmoniosa com o planeta.</p>
-        </div>
+    <section>
+      <h2>Como Contribuir</h2>
+      <p>
+        Você pode fazer a diferença adotando pequenas atitudes diárias: reduzir o consumo de plástico,
+        apoiar projetos de reflorestamento e praticar o consumo consciente.
+      </p>
     </section>
+  </main>
 
-    <section id="conteudo" class="main">
-        <div class="main-content">
-            <p>Para Félix Guattari, a ecologia ambiental é um dos três componentes fundamentais da “ecosofia”, integrando-se à ecologia social e à ecologia mental. Segundo sua perspectiva, a questão ambiental não se resume a um problema da natureza; ela é, antes, o resultado de uma crise mais profunda que afeta nossa existência, nossos relacionamentos e nossas formas de pensar.</p>
-            <p>Assim, a relevância de cuidar do planeta transcende a mera subsistência: implica assegurar harmonia na natureza, bem-estar e um amanhã viável para todos os seres vivos. Segundo Guattari, tal cuidado demanda uma transformação no modo de pensar e nos princípios, incentivando um relacionamento inédito, mais justo e fraterno com o mundo.</p>
-        </div>
-    </section>
-
-    <section id="citacao">
-        <div class="quote">
-            “Cuidar do planeta é cuidar de nós mesmos.”
-        </div>
-    </section>
-
-    <footer>
-        Desenvolvido como exercício de reflexão ecológica • 2025
-    </footer>
-
-    <script>
-        // Scroll suave
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', e => {
-                e.preventDefault();
-                document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        // Animações ao rolar
-        const sections = document.querySelectorAll('section');
-        window.addEventListener('scroll', () => {
-            sections.forEach(sec => {
-                const rect = sec.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 100) sec.classList.add('visible');
-            });
-        });
-
-        // Parallax efeito suave
-        const parallaxBg = document.querySelector('.parallax-bg');
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            parallaxBg.style.transform = `translateY(${scrolled * 0.3}px)`;
-        });
-    </script>
-
+  <footer>
+    <p>Desenvolvido por <a href="https://github.com/Samael42" target="_blank">@Samael42</a> — Projeto Ecosofia</p>
+  </footer>
 </body>
 </html>
