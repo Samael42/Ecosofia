@@ -1,163 +1,177 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ecosofia — A Ecologia Ambiental</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/757/757255.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ecosofia e a Ecologia Ambiental</title>
+  <!-- Tipografia elegante via Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg-color: #f4f4f5;
-      --text-color: #2d323e;
-      --accent-color: #4caf50;
-      --light-accent: #e8f5e9;
-      --shadow: rgba(0, 0, 0, 0.1);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* 🌿 Estilos gerais */
     body {
-      font-family: 'Poppins', sans-serif;
-      color: var(--text-color);
-      background-color: var(--bg-color);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f5f5f0;
+      color: #2f3e46;
+      scroll-behavior: smooth;
     }
 
     header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(8px);
-      box-shadow: 0 2px 8px var(--shadow);
+      background-color: #2f3e46;
+      color: #ffffff;
+      padding: 2rem;
       text-align: center;
-      padding: 1rem 0;
-      z-index: 100;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     header h1 {
+      margin: 0;
       font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--accent-color);
     }
 
-    main {
-      margin-top: 100px;
-      max-width: 800px;
-      width: 90%;
-      background: white;
-      padding: 2rem 2.5rem;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px var(--shadow);
-      text-align: center;
-      transition: transform 0.3s ease;
+    nav {
+      margin-top: 1rem;
     }
 
-    main:hover {
-      transform: translateY(-4px);
+    nav a {
+      color: #ffffff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
     }
 
-    h2 {
-      font-family: 'Merriweather', serif;
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-      color: var(--text-color);
-    }
-
-    p {
-      line-height: 1.8;
-      font-size: 1.05rem;
-      margin-bottom: 1rem;
+    nav a:hover {
+      color: #a8dadc;
     }
 
     section {
-      margin-top: 2.5rem;
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      font-family: 'Merriweather', serif;
+      color: #264653;
+    }
+
+    .main-content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
     }
 
     .highlight {
-      background: var(--light-accent);
+      background-color: #e0f2f1;
       padding: 1rem;
-      border-radius: 10px;
-      font-weight: 500;
-      color: var(--accent-color);
-      margin: 1.5rem 0;
+      border-left: 4px solid #2a9d8f;
+      font-style: italic;
+    }
+
+    .quote {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #2a9d8f;
+      margin: 4rem 0;
+      font-family: 'Merriweather', serif;
     }
 
     footer {
-      margin-top: 3rem;
-      padding: 1rem;
       text-align: center;
-      color: #555;
+      padding: 2rem;
+      background-color: #2f3e46;
+      color: #ffffff;
       font-size: 0.9rem;
     }
 
-    footer a {
-      color: var(--accent-color);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
+    /* 📱 Responsividade */
     @media (max-width: 600px) {
       header h1 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
       }
 
-      main {
-        padding: 1.5rem;
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
       }
 
-      h2 {
-        font-size: 1.3rem;
+      .quote {
+        font-size: 1.2rem;
       }
     }
   </style>
 </head>
 <body>
+  <!-- 🌟 Cabeçalho -->
   <header>
-    <h1>Ecosofia 🌱</h1>
+    <h1>Ecosofia e a Ecologia Ambiental segundo Félix Guattari</h1>
+    <nav>
+      <a href="#intro">Introdução</a>
+      <a href="#principal">Texto Principal</a>
+      <a href="#citacao">Citação</a>
+    </nav>
   </header>
 
-  <main>
-    <h2>O que é Ecosofia?</h2>
+  <!-- 🧠 Introdução -->
+  <section id="intro" class="intro">
     <p>
-      A <strong>Ecosofia</strong> é o estudo filosófico da relação entre o ser humano e o meio ambiente,
-      propondo uma integração ética entre tecnologia, natureza e consciência.
+      A “ecosofia”, conceito desenvolvido por Félix Guattari, propõe uma abordagem integrada entre ecologia ambiental, social e mental. Para ele, cuidar do planeta não é apenas preservar a natureza, mas transformar nossas relações, pensamentos e modos de vida. Essa integração é essencial para construir uma existência mais harmônica e sustentável.
+    </p>
+  </section>
+
+  <!-- 🌍 Conteúdo principal -->
+  <section id="principal" class="main-content">
+    <p>
+      Para Félix Guattari, a ecologia ambiental é um dos três componentes fundamentais da ‘ecosofia’, integrando-se à ecologia social e à ecologia mental. Segundo sua perspectiva, a questão ambiental não se resume a um problema da natureza; ela é, antes, o resultado de uma crise mais profunda que afeta nossa existência, nossos relacionamentos e nossas formas de pensar.
     </p>
     <div class="highlight">
-      “A ecologia sem filosofia é cega; a filosofia sem ecologia é vazia.”
+      Assim, a relevância de cuidar do planeta transcende a mera subsistência: implica assegurar harmonia na natureza, bem-estar e um amanhã viável para todos os seres vivos.
     </div>
+    <p>
+      Segundo Guattari, tal cuidado demanda uma transformação no modo de pensar e nos princípios, incentivando um relacionamento inédito, mais justo e fraterno com o mundo.
+    </p>
+  </section>
 
-    <section>
-      <h2>Nosso Propósito</h2>
-      <p>
-        Promover a reflexão sobre o impacto das ações humanas no planeta, incentivando um modo de vida
-        sustentável e respeitoso com todos os seres vivos.
-      </p>
-    </section>
+  <!-- 💬 Citação destacada -->
+  <section id="citacao" class="quote">
+    “Cuidar do planeta é cuidar de nós mesmos”
+  </section>
 
-    <section>
-      <h2>Como Contribuir</h2>
-      <p>
-        Você pode fazer a diferença adotando pequenas atitudes diárias: reduzir o consumo de plástico,
-        apoiar projetos de reflorestamento e praticar o consumo consciente.
-      </p>
-    </section>
-  </main>
-
+  <!-- 🧾 Rodapé -->
   <footer>
-    <p>Desenvolvido por <a href="https://github.com/Samael42" target="_blank">@Samael42</a> — Projeto Ecosofia</p>
+    Desenvolvido como exercício de reflexão ecológica
   </footer>
+
+  <!-- ✨ JavaScript para animações de scroll -->
+  <script>
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
