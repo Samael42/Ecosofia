@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ecosofia e a Ecologia Ambiental</title>
-  <!-- Tipografia elegante via Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:ital,wght@0,400;1,400&family=Poppins:wght@500&display=swap" rel="stylesheet">
   <style>
     /* 🌿 Estilos gerais */
     body {
@@ -61,6 +60,32 @@
       transform: translateY(0);
     }
 
+    /* ✨ Tipografia contextual */
+    .eco-ambiental {
+      font-family: 'Merriweather', serif;
+      font-style: italic;
+      color: #2a9d8f;
+      font-size: 1.15rem;
+      line-height: 1.8;
+    }
+
+    .eco-mental {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      color: #457b9d;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .eco-social {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      color: #264653;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
     .intro p {
       font-size: 1.2rem;
       line-height: 1.6;
@@ -68,26 +93,22 @@
       color: #264653;
     }
 
-    .main-content p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-    }
-
     .highlight {
       background-color: #e0f2f1;
       padding: 1rem;
       border-left: 4px solid #2a9d8f;
       font-style: italic;
+      font-family: 'Merriweather', serif;
     }
 
     .quote {
       text-align: center;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       font-weight: 600;
       color: #2a9d8f;
       margin: 4rem 0;
       font-family: 'Merriweather', serif;
+      animation: fadeIn 2s ease;
     }
 
     footer {
@@ -110,8 +131,14 @@
       }
 
       .quote {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
+    }
+
+    /* 🌬️ Animações */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -134,14 +161,17 @@
   </section>
 
   <!-- 🌍 Conteúdo principal -->
-  <section id="principal" class="main-content">
-    <p>
-      Para Félix Guattari, a ecologia ambiental é um dos três componentes fundamentais da ‘ecosofia’, integrando-se à ecologia social e à ecologia mental. Segundo sua perspectiva, a questão ambiental não se resume a um problema da natureza; ela é, antes, o resultado de uma crise mais profunda que afeta nossa existência, nossos relacionamentos e nossas formas de pensar.
+  <section id="principal">
+    <p class="eco-ambiental">
+      Para Félix Guattari, a ecologia ambiental é um dos três componentes fundamentais da ‘ecosofia’, integrando-se à ecologia social e à ecologia mental.
+    </p>
+    <p class="eco-mental">
+      Segundo sua perspectiva, a questão ambiental não se resume a um problema da natureza; ela é, antes, o resultado de uma crise mais profunda que afeta nossa existência, nossos relacionamentos e nossas formas de pensar.
     </p>
     <div class="highlight">
       Assim, a relevância de cuidar do planeta transcende a mera subsistência: implica assegurar harmonia na natureza, bem-estar e um amanhã viável para todos os seres vivos.
     </div>
-    <p>
+    <p class="eco-social">
       Segundo Guattari, tal cuidado demanda uma transformação no modo de pensar e nos princípios, incentivando um relacionamento inédito, mais justo e fraterno com o mundo.
     </p>
   </section>
